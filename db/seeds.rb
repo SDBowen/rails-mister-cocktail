@@ -10,4 +10,8 @@ Ingredient.create(name: "lemon")
 Ingredient.create(name: "ice")
 Ingredient.create(name: "mint leaves")
 
-Cocktail.create(name: 'test')
+new_cocktail = Cocktail.create(name: 'Mint Julip')
+
+Dose.create(description: 'Add lemon', cocktail: new_cocktail, ingredient: Ingredient.find(1))
+Dose.create(description: 'Add mint', cocktail: new_cocktail, ingredient: Ingredient.find(3))
+Dose.create(description: 'Add ice', cocktail: new_cocktail, ingredient: Ingredient.find(2))
