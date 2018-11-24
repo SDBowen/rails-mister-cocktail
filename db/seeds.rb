@@ -11,6 +11,8 @@ ice = Ingredient.create(name: "ice")
 mint = Ingredient.create(name: "mint leaves")
 tomatoe = Ingredient.create(name: "tomatoe")
 pepper = Ingredient.create(name: "pepper")
+cucumber = Ingredient.create(name: "cucumber")
+water = Ingredient.create(name: "water")
 
 new_cocktail = Cocktail.create(name: 'Mint Julip')
 
@@ -23,3 +25,13 @@ new_cocktail = Cocktail.create(name: 'Bloody Mary')
 Dose.create(description: 'Add tomatoe', cocktail: new_cocktail, ingredient: tomatoe)
 Dose.create(description: 'Add pepper', cocktail: new_cocktail, ingredient: pepper)
 Dose.create(description: 'Add ice', cocktail: new_cocktail, ingredient: ice)
+
+new_cocktail = Cocktail.create(name: 'Cucumber Soda')
+
+Dose.create(description: 'Add lemon', cocktail: new_cocktail, ingredient: lemon)
+Dose.create(description: 'Add cucumber', cocktail: new_cocktail, ingredient: cucumber)
+Dose.create(description: 'Add ice', cocktail: new_cocktail, ingredient: ice)
+
+new_cocktail = Cocktail.create(name: 'Water')
+
+Dose.create(description: 'Add water', cocktail: new_cocktail, ingredient: water)
