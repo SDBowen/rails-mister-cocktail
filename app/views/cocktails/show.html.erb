@@ -1,6 +1,8 @@
 <p><%= @cocktail.name %></p>
-<p><%= @cocktail.inspect %></p>
-<% @cocktail.ingredients.each do |ingredient| %>
-<p> <%= ingredient.name %> </p>
+<% @cocktail.doses.each do |dose| %>
+<p> 
+  <%= "#{@cocktail.ingredients.find_by(id: dose.ingredient_id).name} - #{dose.description}" %> 
+<%= link_to 'Destroy',  dose,  method: :delete, data: { confirm: 'Are you sure?' } %>
 <% end %>
+</p>
 <%= link_to('Add a dose', new_cocktail_dose_path(@cocktail)) %>
